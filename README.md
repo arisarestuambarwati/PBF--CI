@@ -458,12 +458,12 @@ Arahkan browser Anda ke halaman "berita" Anda, yaitu, localhost:8080/news, Anda 
      Komponen ini bertanggung jawab untuk menerima input dari pengguna, memprosesnya, dan mengirimkan instruksi kepada model atau view. Controller biasanya disimpan dalam app/Controllers
 
 ## General Topics 
-### Helper Functions
-#### What are Helpers?
+## Helper Functions
+### What are Helpers?
 Helper adalah istilah yang digunakan untuk menggambarkan kumpulan fungsi-fungsi bantuan yang dirancang untuk membantu dalam tugas-tugas tertentu dalam pengembangan aplikasi.
 Pembantu biasanya disimpan di direktori system/Helpers atau app/Helpers anda.
 
-#### Loading a Helper
+### Loading a Helper
 Memuat file pembantu cukup sederhana menggunakan metode berikut:
 ``` shell
 <?php
@@ -479,7 +479,7 @@ Misalnya, untuk memuat file Pembantu Cookie, yang diberi nama cookie_helper.php,
 helper('cookie');
 ```
 
-#### Loading Multiple Helpers
+### Loading Multiple Helpers
 Jika Anda perlu memuat lebih dari satu helper sekaligus, Anda dapat lulus Array nama file di dan semuanya akan dimuat:
 ``` shell
 <?php
@@ -487,7 +487,7 @@ Jika Anda perlu memuat lebih dari satu helper sekaligus, Anda dapat lulus Array 
 helper(['cookie', 'date']);
 ```
 
-#### Loading from Specified Namespace
+### Loading from Specified Namespace
 Di dalam controller kami, kami dapat Gunakan perintah berikut untuk memuat helper untuk kami:
 ``` shell
 <?php
@@ -500,7 +500,7 @@ Anda juga dapat menggunakan cara berikut:
 
 helper('Example\Blog\Helpers\blog');
 ```
-#### Using a Helper
+### Using a Helper
 Misalnya, untuk membuat tautan menggunakan fungsi di salah satu file tampilan Anda, Anda akan melakukan ini:
 ``` shell
 <div>
@@ -508,7 +508,7 @@ Misalnya, untuk membuat tautan menggunakan fungsi di salah satu file tampilan An
 </div>
 ```
 
-#### Creating Custom Helpers
+### Creating Custom Helpers
 Misalnya, untuk membuat info helper, Anda akan membuat file bernama app/Helpers/info_helper.php, dan menambahkan fungsi ke file:
 ``` shell
 ?php
@@ -525,7 +525,7 @@ function ci_version(): string
 }
 ```
 
-#### “Extending” Helpers
+### “Extending” Helpers
 Misalnya, untuk memperluas Array Helper asli, Anda akan membuat file bernama app/Helpers/array_helper.php, dan tambahkan atau ganti Fungsi:
 ``` shell
 <?php
@@ -584,8 +584,6 @@ class Product extends BaseController
 
 ### Helpers
 Anda dapat menentukan array file pembantu sebagai properti kelas.  dapat menggunakan metode mereka di mana saja Di dalam pengontrol:
-
-<?php
 ``` shell
 <?php
 
@@ -638,34 +636,6 @@ class StoreController extends BaseController
     }
 }
 ```
-
-Anda dapat mengganti array dengan nama grup seperti yang didefinisikan dalam app/Config/Validation.php:
-``` shell
-<?php
-
-namespace App\Controllers;
-
-class UserController extends BaseController
-{
-    public function updateUser(int $userID)
-    {
-        if (! $this->validate('userRules')) {
-            // The validation failed.
-            return view('users/update', [
-                'errors' => $this->validator->getErrors(),
-            ]);
-        }
-
-        // The validation was successful.
-
-        // Get the validated data.
-        $validData = $this->validator->getValidated();
-
-        // ...
-    }
-}
-```
-
 ## Methods
 ### Normal Methods
 Tambahkan metode baru ke pengontrol Anda:
@@ -729,7 +699,7 @@ Menggunakan editor teks Anda, buat file bernama blog_view.php dan masukkan ini k
 ```
 Kemudian simpan file di direktori app/Views Anda.
 
-#### Displaying a View
+### Displaying a View
 Untuk memuat dan menampilkan file tampilan tertentu, Anda akan menggunakan kode berikut di pengontrol Anda:
 ``` shell
 return view('name');
