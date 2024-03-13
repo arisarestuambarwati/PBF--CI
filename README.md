@@ -1,7 +1,7 @@
 # ARISA RESTU AMBARWATI (220202030)
 
 ## Welcome to CodeIgniter4
-CodeIgniter adalah alat yang mempercepat pembangunan situs web PHP. Dengan banyaknya perpustakaan yang tersedia, Anda bisa membangun proyek lebih cepat daripada harus menulis kode dari awal. Antarmuka sederhana dan struktur yang logis memudahkan akses perpustakaan tersebut. Dengan CodeIgniter, Anda bisa fokus pada kreativitas Anda dengan meminimalkan jumlah kode yang harus Anda tulis.
+CodeIgniter adalah alat yang mempercepat pembangunan situs web PHP. Dengan banyaknya perpustakaan yang tersedia bisa membangun proyek lebih cepat daripada harus menulis kode dari awal. Antarmuka sederhana dan struktur yang logis memudahkan akses perpustakaan tersebut. Dengan CodeIgniter, Anda bisa fokus pada kreativitas Anda dengan meminimalkan jumlah kode yang harus Anda tulis.
 
 ## Server Requirements
 - PHP dan Ekstensi yang Diperlukan
@@ -14,7 +14,7 @@ Diperlukan PHP versi 7.4 atau lebih baru, dengan ekstensi PHP berikut diaktifkan
 - mbstring
 - json
 
-### Ekstensi PHP Opsional
+### Ekstensi PHP Opsional
 Ekstensi PHP berikut harus diaktifkan di server Anda:
 - mysqlnd (jika Anda menggunakan MySQL)
 MySQL Native Driver (mysqlnd) adalah sebuah driver PHP yang menyediakan fungsi-fungsi untuk mengakses MySQL databases secara langsung tanpa menggunakan pustaka tambahan.
@@ -37,7 +37,7 @@ Ekstensi PHP berikut diperlukan saat Anda menggunakan PHPUnit:
 - libxml (jika Anda menggunakan kelas TestResponse )
 - xdebug (jika Anda menggunakan CIUnitTestCase::assertHeaderEmitted())
 
-### Basis Data yang Didukung
+### Basis Data yang Didukung
 Basis data yang didukung saat ini adalah:
 * MySQL melalui MySQLidriver (hanya versi 5.1 ke atas)
 * PostgreSQL melalui Postgredriver (hanya versi 7.4 dan lebih tinggi)
@@ -45,7 +45,7 @@ Basis data yang didukung saat ini adalah:
 * Microsoft SQL Server melalui SQLSRVdriver (hanya versi 2005 dan lebih tinggi)
 * Oracle Database melalui OCI8driver (hanya versi 12.1 dan lebih tinggi)
 
-Tidak semua driver telah dikonversi/ditulis ulang untuk CodeIgniter4. Daftar dibawah ini untuk yang luar biasa.
+Tidak semua driver telah dikonversi/ditulis ulang untuk CodeIgniter4. Daftar :
 * MySQL (5.1+) melalui driver pdo
 * Oracle melalui driver pdo
 * PostgreSQL melalui driver pdo
@@ -60,14 +60,14 @@ CodeIgniter memiliki dua metode instalasi yang didukung: download manual, atau m
 
 ### Installasi Komposer
 CodeIgniter4 memerlukan Composer 2.0.14 atau lebih baru.
-1. Pastikan Anda telah menginstal Composer di sistem Anda. Jika belum, Anda dapat mengunduh dan menginstalnya dari https://getcomposer.org/.
+1. Pastikan Anda telah menginstal Composer. Jika belum, Anda dapat mengunduh dan menginstalnya dari https://getcomposer.org/.
 2. Buka terminal atau command prompt.
 3. Jalankan perintah Composer untuk membuat proyek CodeIgniter baru dengan code :
    ``` shell
    composer create-project codeigniter4/appstarter project-root
    ```
    Perintah di atas akan membuat folder root proyek .
-4. Pindah direktori ke file yang telah dibuat sebelumnya
+5. Pindah direktori ke file yang telah dibuat sebelumnya
    ``` shell
    cd project-root
    ```
@@ -113,12 +113,12 @@ Folder di proyek Anda setelah disiapkan:
 - aplikasi, publik, tes, dapat ditulis, sistem
 
 ### Local Development Server
-Anda dapat meluncurkannya, dengan baris perintah berikut di direktori utama:
+Baris perintah berikut di direktori utama:
 ``` shell
 php spark serve
 ```
 Server pengembangan lokal dapat disesuaikan dengan tiga opsi baris perintah:
-* Anda dapat menggunakan opsi CLI untuk menentukan host yang berbeda untuk menjalankan aplikasi di:--host
+* Opsi CLI untuk menentukan host yang berbeda untuk menjalankan aplikasi di:--host
   ``` shell
   php spark serve --host example.dev
   ```
@@ -126,7 +126,7 @@ Server pengembangan lokal dapat disesuaikan dengan tiga opsi baris perintah:
   ``` shell
   php spark serve --port 8081
   ```
-* Anda juga dapat menentukan versi PHP tertentu untuk digunakan, dengan opsi CLI, dengan nilainya atur ke jalur eksekusi PHP yang ingin Anda gunakan:
+* Opsi CLI, dengan nilainya atur ke jalur eksekusi PHP yang ingin Anda gunakan:
   ``` shell
   php spark serve --php /usr/bin/php7.6.5.4
   ```
@@ -154,8 +154,8 @@ Perutean mengaitkan URI dengan metode pengontrol.
    $routes->get('pages', [Pages::class, 'index']);
    $routes->get('(:segment)', [Pages::class, 'view']);
    ```
-3. Di sini, aturan kedua dalam objek cocok dengan permintaan GET ke jalur URI /pages, dan memetakan ke metode kelas.$routesindex()Pages
-4. Aturan ketiga dalam objek cocok dengan permintaan GET ke segmen URI menggunakan placeholder , dan meneruskan parameter ke metode kelas.$routes(:segment)view()Pages
+   Di sini, aturan kedua dalam objek cocok dengan permintaan GET ke jalur URI /pages, dan memetakan ke metode kelas.$routesindex()Pages
+   Aturan ketiga dalam objek cocok dengan permintaan GET ke segmen URI menggunakan placeholder , dan meneruskan parameter ke metode kelas.$routes(:segment)view()Pages
    
 ### Let’s Make our First Controller
 Hal berikutnya yang akan Anda lakukan adalah menyiapkan pengontrol untuk ditangani halaman statis.
@@ -180,7 +180,7 @@ Hal berikutnya yang akan Anda lakukan adalah menyiapkan pengontrol untuk ditanga
    }
    ```
 ### Create Views
-Kami akan membuat dua "tampilan" (template halaman) yang bertindak sebagai footer dan header halaman kami.
+Buat dua "tampilan" (template halaman) yang bertindak sebagai footer dan header halaman kami.
 
 1. Buat header di app/Views/templates/header.php dan tambahkan kode berikut:
    ``` shell
@@ -202,7 +202,7 @@ Kami akan membuat dua "tampilan" (template halaman) yang bertindak sebagai foote
 
 ### Halaman Lengkap::view() Metode
 
-1. Untuk memuat halaman-halaman itu, Anda harus memeriksa apakah yang diminta halaman benar-benar ada. Ketikkan kode : 
+1. Untuk memuat halaman-halaman itu, Anda harus cek apakah halaman yang diminta benar-benar ada. Ketikkan kode : 
 
 ``` shell
 <?php
@@ -236,10 +236,9 @@ class Pages extends BaseController
    ```
 
 ## News Section
-
 ### Create a Database to Work with
-1. Anda perlu membuat database yang dapat digunakan untuk tutorial ini, dan kemudian mengkonfigurasi CodeIgniter untuk menggunakannya
-2. Menggunakan klien database Anda, sambungkan ke database Anda dan jalankan perintah SQL di bawah ini (MySQL):
+1. Buat database yang dapat digunakan, kemudian mengkonfigurasi CodeIgniter untuk menggunakannya
+2. Sambungkan ke database Anda dan jalankan perintah SQL di bawah ini (MySQL):
    ``` shell
    CREATE TABLE news (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -257,7 +256,7 @@ class Pages extends BaseController
     (2,'Say it isn\'t so!','say-it-isnt-so','Scientists conclude that some programmers have a sense of humor.'),
     (3,'Caffeination, Yes!','caffeination-yes','World\'s largest coffee shop open onsite nested coffee shop for staff only.');
    ```
-
+   
 ### Connect to Your Database
 Pastikan Anda telah mengonfigurasi database Anda dengan benar seperti yang dijelaskan dalam Konfigurasi Database:
 ``` shell
@@ -284,7 +283,7 @@ class NewsModel extends Model
 ```
 
 ### Add NewsModel::getNews() Method
-Tambahkan mengikuti kode ke model anda
+Tambahkan mengikuti kode kedalam model anda
 
 ``` shell
 public function getNews($slug = false)
@@ -296,9 +295,6 @@ public function getNews($slug = false)
         return $this->where(['slug' => $slug])->first();
     }
 ```
-
-## Display the News
-Sekarang setelah kueri ditulis, model harus dikaitkan dengan tampilan yang akan menampilkan item berita kepada pengguna.
 
 ### Adding Routing Rules
 Ubah file app/Config/Routes.php Anda, sehingga terlihat sebagai berikut:
@@ -346,7 +342,7 @@ class News extends BaseController
 }
 ```
 
-### Complete News::index() Method
+### Complete News::index() Method
 Ubah metode agar terlihat seperti ini:
 
 ``` shell
@@ -405,7 +401,7 @@ Buat app/Views/news/index.php dan tambahkan potongan kode berikutnya.
 ```
 
 ### Complete News::show() Method
-Tambahkan beberapa kode ke pengontrol dan buat tampilan baru. Kembali ke pengontrol dan perbarui metode dengan yang berikut:
+Tambahkan beberapa kode ke pengontrol dan buat tampilan baru. Kembali ke pengontrol dan perbarui metode menjadi :
 
 ``` shell
 <?php
@@ -438,42 +434,36 @@ class News extends BaseController
 }
 ```
 ### Create news/view View File
-Satu-satunya hal yang tersisa untuk dilakukan adalah membuat tampilan yang sesuai di app/Views/news/view.php. Masukkan kode berikut dalam file ini.
+Kemudian buat tampilan yang sesuai di app/Views/news/view.php. Masukkan kode berikut dalam file ini.
 
 ``` shell
 <h2><?= esc($news['title']) ?></h2>
 <p><?= esc($news['body']) ?></p>
 ```
 
-Arahkan browser Anda ke halaman "berita" Anda, yaitu, localhost:8080/news, Anda akan melihat daftar item berita, yang masing-masing memiliki tautan untuk menampilkan hanya satu artikel.
+Arahkan browser Anda ke halaman "berita" Anda, yaitu, localhost:8080/news, Anda akan melihat daftar item berita.
 
 ## CodeIgniter4 Overview
 ### Models, Views, and Controllers
-* What is MVC?
+#### What is MVC?
   MVC adalah singkatan dari Model-View-Controller, yang merupakan pola desain (design pattern) yang umum digunakan dalam pengembangan perangkat lunak, terutama dalam pengembangan aplikasi web. Pola ini membagi aplikasi menjadi tiga komponen utama: Model, View, dan Controller. Berikut adalah penjelasan singkat tentang masing-masing komponen:
   
   1. Models
-     model adalah mempertahankan satu jenis data untuk aplikasi. Ini mungkin pengguna, posting blog, transaksi, dll. Dalam hal ini, pekerjaan model memiliki dua bagian: menegakkan aturan bisnis pada data saat ditarik dari, atau dimasukkan ke dalam, basis data; dan menangani penyimpanan aktual dan pengambilan data dari database.
-
-    Model biasanya disimpan dalam app/Models, meskipun mereka dapat menggunakan namespace untuk dikelompokkan sesuai kebutuhan Anda.
+     Komponen ini bertanggung jawab untuk mengelola logika bisnis dan data aplikasi.Model biasanya disimpan dalam app/Models.
   
   2. Views
-     Tampilan adalah file yang paling sederhana dan biasanya HTML dengan jumlah PHP yang sangat kecil. PHP harus sangat sederhana, Biasanya hanya menampilkan isi variabel, atau mengulang beberapa item dan menampilkan informasinya dalam tabel.
-
-    Views biasanya disimpan dalam app/Views,
+     Komponen ini bertanggung jawab untuk menampilkan informasi kepada pengguna dan menanggapi input dari mereka. Views biasanya disimpan dalam app/Views,
 
   3. Controller
-     mereka menerima masukan dari pengguna dan Kemudian tentukan apa yang harus dilakukan dengannya. Ini sering melibatkan meneruskan data ke model untuk menyimpannya, atau meminta data dari Model yang kemudian diteruskan ke tampilan yang akan ditampilkan.
-
-      Controller biasanya disimpan dalam app/Controllers, meskipun mereka dapat menggunakan namespace untuk dikelompokkan Kamu butuh.
+     Komponen ini bertanggung jawab untuk menerima input dari pengguna, memprosesnya, dan mengirimkan instruksi kepada model atau view. Controller biasanya disimpan dalam app/Controllers
 
 ## General Topics 
 ### Helper Functions
-What are Helpers?
+#### What are Helpers?
 Helper adalah istilah yang digunakan untuk menggambarkan kumpulan fungsi-fungsi bantuan yang dirancang untuk membantu dalam tugas-tugas tertentu dalam pengembangan aplikasi.
 Pembantu biasanya disimpan di direktori system/Helpers atau app/Helpers anda.
 
-Loading a Helper
+#### Loading a Helper
 Memuat file pembantu cukup sederhana menggunakan metode berikut:
 ``` shell
 <?php
@@ -489,7 +479,7 @@ Misalnya, untuk memuat file Pembantu Cookie, yang diberi nama cookie_helper.php,
 helper('cookie');
 ```
 
-Loading Multiple Helpers
+#### Loading Multiple Helpers
 Jika Anda perlu memuat lebih dari satu helper sekaligus, Anda dapat lulus Array nama file di dan semuanya akan dimuat:
 ``` shell
 <?php
@@ -497,8 +487,8 @@ Jika Anda perlu memuat lebih dari satu helper sekaligus, Anda dapat lulus Array 
 helper(['cookie', 'date']);
 ```
 
-Loading from Specified Namespace
-Di dalam pengontrol kami, kami dapat Gunakan perintah berikut untuk memuat helper untuk kami:
+#### Loading from Specified Namespace
+Di dalam controller kami, kami dapat Gunakan perintah berikut untuk memuat helper untuk kami:
 ``` shell
 <?php
 
@@ -510,7 +500,7 @@ Anda juga dapat menggunakan cara berikut:
 
 helper('Example\Blog\Helpers\blog');
 ```
-Using a Helper
+#### Using a Helper
 Misalnya, untuk membuat tautan menggunakan fungsi di salah satu file tampilan Anda, Anda akan melakukan ini:
 ``` shell
 <div>
@@ -518,7 +508,7 @@ Misalnya, untuk membuat tautan menggunakan fungsi di salah satu file tampilan An
 </div>
 ```
 
-Creating Custom Helpers
+#### Creating Custom Helpers
 Misalnya, untuk membuat info helper, Anda akan membuat file bernama app/Helpers/info_helper.php, dan menambahkan fungsi ke file:
 ``` shell
 ?php
@@ -535,7 +525,7 @@ function ci_version(): string
 }
 ```
 
-“Extending” Helpers
+#### “Extending” Helpers
 Misalnya, untuk memperluas Array Helper asli, Anda akan membuat file bernama app/Helpers/array_helper.php, dan tambahkan atau ganti Fungsi:
 ``` shell
 <?php
@@ -563,9 +553,10 @@ function random_element($array)
 ```
 
 ## Controllers
-What is a Controller?
-
-Constructor
+### What is a Controller?
+Komponen ini bertanggung jawab untuk menerima input dari pengguna, memprosesnya, dan mengirimkan instruksi kepada model atau view. 
+### Constructor
+Jika Anda ingin mengganti , jangan lupa untuk menambahkan metode:
 ``` shell
 <?php
 
@@ -591,7 +582,10 @@ class Product extends BaseController
 }
 ```
 
-Helpers
+### Helpers
+Anda dapat menentukan array file pembantu sebagai properti kelas.  dapat menggunakan metode mereka di mana saja Di dalam pengontrol:
+
+<?php
 ``` shell
 <?php
 
@@ -603,7 +597,8 @@ class MyController extends BaseController
 }
 ```
 
-forceHTTPS
+### forceHTTPS
+Metode kenyamanan untuk memaksa metode diakses melalui HTTPS tersedia dalam semua Controller:
 ``` shell
 <?php
 
@@ -612,15 +607,8 @@ if (! $this->request->isSecure()) {
 }
 ```
 
-``` shell
-<?php
-
-if (! $this->request->isSecure()) {
-    $this->forceHTTPS(31536000); // one year
-}
-```
-
-Validating Data
+#### Validating Data
+Untuk mempermudah pengecekan data, controller juga menyediakan metode kenyamanan.
 ``` shell
 <?php
 
@@ -651,35 +639,7 @@ class StoreController extends BaseController
 }
 ```
 
-``` shell
-<?php
-
-namespace App\Controllers;
-
-class UserController extends BaseController
-{
-    public function updateUser(int $userID)
-    {
-        if (! $this->validate([
-            'email' => "required|is_unique[users.email,id,{$userID}]",
-            'name'  => 'required|alpha_numeric_spaces',
-        ])) {
-            // The validation failed.
-            return view('users/update', [
-                'errors' => $this->validator->getErrors(),
-            ]);
-        }
-
-        // The validation was successful.
-
-        // Get the validated data.
-        $validData = $this->validator->getValidated();
-
-        // ...
-    }
-}
-```
-
+Anda dapat mengganti array dengan nama grup seperti yang didefinisikan dalam app/Config/Validation.php:
 ``` shell
 <?php
 
@@ -705,37 +665,10 @@ class UserController extends BaseController
     }
 }
 ```
-Protecting Methods
-``` shell
-<?php
 
-namespace App\Controllers;
-
-class Helloworld extends BaseController
-{
-    protected function utility()
-    {
-        // some code
-    }
-}
-```
-
-Let’s try it: Hello World!
-``` shell
-<?php
-
-namespace App\Controllers;
-
-class Helloworld extends BaseController
-{
-    public function getIndex()
-    {
-        return 'Hello World!';
-    }
-}
-```
-Methods
-Normal Methods
+## Methods
+### Normal Methods
+Tambahkan metode baru ke pengontrol Anda:
 ``` shell
 <?php
 
@@ -754,15 +687,17 @@ class Helloworld extends BaseController
     }
 }
 ```
-Defining a Default Controller
+### Defining a Default Controller
+Untuk menentukan pengontrol default, buka file app/Config/Routing.php Anda dan atur properti ini:
 ``` shell
 public string $defaultController = 'Helloworld';
 ```
 
+Dan komentari baris di app/Config/Routes.php:
 ``` shell
 $routes->get('/', 'Home::index');
 ```
-Default Method Fallback
+### Default Method Fallback
 ``` shell
 <?php
 
@@ -776,37 +711,187 @@ class Product extends BaseController
     }
 }
 ```
-Fallback to Default Controller
+
+## Views
+Tampilan hanyalah halaman web, atau fragmen halaman, seperti header, footer, sidebar, dll. 
+
+### Creating a View
+Menggunakan editor teks Anda, buat file bernama blog_view.php dan masukkan ini ke dalamnya:
 ``` shell
-<?php
-
-namespace App\Controllers\News;
-
-use App\Controllers\BaseController;
-
-class Home extends BaseController
-{
-    public function getIndex($id = null)
-    {
-        // ...
-    }
-}
+<html>
+    <head>
+        <title>My Blog</title>
+    </head>
+    <body>
+        <h1>Welcome to my Blog!</h1>
+    </body>
+</html>
 ```
+Kemudian simpan file di direktori app/Views Anda.
 
-Let’s try it: Hello World! (Legacy)
+#### Displaying a View
+Untuk memuat dan menampilkan file tampilan tertentu, Anda akan menggunakan kode berikut di pengontrol Anda:
+``` shell
+return view('name');
+```
+Sekarang, buat file bernama Blog.php di direktori app/Controllers, dan taruh ini di dalamnya:
 ``` shell
 <?php
 
 namespace App\Controllers;
 
-class Helloworld extends BaseController
+class Blog extends BaseController
 {
     public function index()
     {
-        return 'Hello World!';
+        return view('blog_view');
     }
 }
 ```
+Buka file perutean yang terletak di app/Config/Routes.php, dan cari "Route Definitions". Tambahkan kode berikut:
+``` shell
+use App\Controllers\Blog;
+
+$routes->get('blog', [Blog::class, 'index']);
+```
+### Loading Multiple Views
+Misalnya, Anda mungkin ingin memiliki tampilan header, tampilan menu, a tampilan konten, dan tampilan footer. Itu mungkin terlihat seperti ini:
+``` shell
+<?php
+
+namespace App\Controllers;
+
+use CodeIgniter\Controller;
+
+class Page extends Controller
+{
+    public function index()
+    {
+        $data = [
+            'page_title' => 'Your title',
+        ];
+
+        return view('header')
+            . view('menu')
+            . view('content', $data)
+            . view('footer');
+    }
+}
+```
+
+### Namespaced Views
+Setelah ini misalnya, Anda dapat memuat file blog_view.php dari example/blog/Views dengan menambahkan namespace ke view name:
+``` shell
+<?php
+
+return view('Example\Blog\Views\blog_view');
+```
+
+### Adding Dynamic Data to the View
+Data dilewatkan dari controller ke view melalui array di parameter kedua fungsi. Berikut contohnya:
+``` shell
+$data = [
+    'title'   => 'My title',
+    'heading' => 'My Heading',
+    'message' => 'My Message',
+];
+
+return view('blog_view', $data);
+```
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class Blog extends BaseController
+{
+    public function index()
+    {
+        $data['title']   = 'My Real Title';
+        $data['heading'] = 'My Real Heading';
+
+        return view('blog_view', $data);
+    }
+}
+```
+Mari kita coba dengan file controller Anda. Buka dan tambahkan kode ini:
+``` shell
+<html>
+    <head>
+        <title><?= esc($title) ?></title>
+    </head>
+    <body>
+        <h1><?= esc($heading) ?></h1>
+    </body>
+</html>
+```
+### The saveData Option
+``` shell
+$data = [
+    'title'   => 'My title',
+    'heading' => 'My Heading',
+    'message' => 'My Message',
+];
+
+return view('blog_view', $data, ['saveData' => false]);
+```
+Anda dapat mengatur ke di app/Config/Views.php
+### Creating Loops
+Berikut contoh sederhananya. Tambahkan ini ke pengontrol Anda:
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class Blog extends BaseController
+{
+    public function index()
+    {
+        $data = [
+            'todo_list' => ['Clean House', 'Call Mom', 'Run Errands'],
+            'title'     => 'My Real Title',
+            'heading'   => 'My Real Heading',
+        ];
+
+        return view('blog_view', $data);
+    }
+}
+```
+``` shell
+<html>
+<head>
+    <title><?= esc($title) ?></title>
+</head>
+<body>
+    <h1><?= esc($heading) ?></h1>
+
+    <h2>My Todo List</h2>
+
+    <ul>
+    <?php foreach ($todo_list as $item): ?>
+
+        <li><?= esc($item) ?></li>
+
+    <?php endforeach ?>
+    </ul>
+
+</body>
+</html>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
