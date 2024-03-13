@@ -8,58 +8,52 @@ CodeIgniter adalah alat yang mempercepat pembangunan situs web PHP. Dengan banya
 - Ekstensi PHP Opsional
 - Basis Data yang Didukung
 
-    ### PHP dan Ekstensi yang Diperlukan
-      Diperlukan PHP versi 7.4 atau lebih baru, dengan ekstensi PHP berikut diaktifkan:
-      - internasional
-      - mbstring
-      - json
+### PHP dan Ekstensi yang Diperlukan
+Diperlukan PHP versi 7.4 atau lebih baru, dengan ekstensi PHP berikut diaktifkan:
+- internasional
+- mbstring
+- json
 
-    ### Ekstensi PHP Opsional
-      Ekstensi PHP berikut harus diaktifkan di server Anda:
-      - mysqlnd (jika Anda menggunakan MySQL)
-        MySQL Native Driver (mysqlnd) adalah sebuah driver PHP yang menyediakan fungsi-fungsi untuk mengakses MySQL databases secara langsung tanpa menggunakan pustaka tambahan.
-      - curl (jika Anda menggunakan CURLRequest )
-        Curl adalah alat baris perintah yang digunakan untuk mentransfer data melalui berbagai protokol, seperti HTTP, HTTPS, FTP, dan lainnya.
-      - imagick (jika Anda menggunakan kelas Gambar ImageMagickHandler)
-      ImageMagick adalah sebuah perangkat lunak open-source yang menyediakan beragam utilitas untuk membuat, mengedit, mengonversi, atau menampilkan gambar.
-      - gd (jika Anda menggunakan kelas Gambar GDHandler)
-        GD adalah singkatan dari "Graphics Draw", sebuah library yang digunakan untuk manipulasi gambar dalam PHP
-      - simplexml (jika Anda memformat XML)
-        SimpleXML adalah sebuah ekstensi PHP yang memungkinkan pengolahan XML menjadi lebih mudah dengan menggunakan pendekatan berbasis objek. 
+### Ekstensi PHP Opsional
+Ekstensi PHP berikut harus diaktifkan di server Anda:
+- mysqlnd (jika Anda menggunakan MySQL)
+MySQL Native Driver (mysqlnd) adalah sebuah driver PHP yang menyediakan fungsi-fungsi untuk mengakses MySQL databases secara langsung tanpa menggunakan pustaka tambahan.
+- curl (jika Anda menggunakan CURLRequest )
+Curl adalah alat baris perintah yang digunakan untuk mentransfer data melalui berbagai protokol, seperti HTTP, HTTPS, FTP, dan lainnya.
+- imagick (jika Anda menggunakan kelas Gambar ImageMagickHandler)
+ImageMagick adalah sebuah perangkat lunak open-source yang menyediakan beragam utilitas untuk membuat, mengedit, mengonversi, atau menampilkan gambar.
+- gd (jika Anda menggunakan kelas Gambar GDHandler)
+GD adalah singkatan dari "Graphics Draw", sebuah library yang digunakan untuk manipulasi gambar dalam PHP
+- simplexml (jika Anda memformat XML)
+SimpleXML adalah sebuah ekstensi PHP yang memungkinkan pengolahan XML menjadi lebih mudah dengan menggunakan pendekatan berbasis objek. 
 
-      Ekstensi PHP berikut diperlukan saat Anda menggunakan server Cache:
-      - memcache (jika Anda menggunakan kelas Cache MemcachedHandler dengan Memcache)
-        Memcache adalah sistem caching yang menyimpan data dalam bentuk pasangan kunci-nilai di dalam memori RAM.
-      - memcached (jika Anda menggunakan kelas Cache MemcachedHandler dengan Memcached)
-        Memcached, di sisi lain, adalah versi yang diperbarui dari Memcache.
-      - redis (jika Anda menggunakan kelas Cache RedisHandler)
-        Redis adalah sebuah basis data sumber terbuka yang berkinerja tinggi dan berbasis memori. 
+Ekstensi PHP berikut diperlukan saat Anda menggunakan server Cache:
+- memcache (jika Anda menggunakan kelas Cache MemcachedHandler dengan Memcache)
+- memcached (jika Anda menggunakan kelas Cache MemcachedHandler dengan Memcached) 
+- redis (jika Anda menggunakan kelas Cache RedisHandler)
+        
+Ekstensi PHP berikut diperlukan saat Anda menggunakan PHPUnit:
+- dom (jika Anda menggunakan kelas TestResponse )
+- libxml (jika Anda menggunakan kelas TestResponse )
+- xdebug (jika Anda menggunakan CIUnitTestCase::assertHeaderEmitted())
 
-      Ekstensi PHP berikut diperlukan saat Anda menggunakan PHPUnit:
-      - dom (jika Anda menggunakan kelas TestResponse )
-        DOM adalah singkatan dari Document Object Model, yang merupakan representasi struktur dokumen HTML atau XML sebagai objek, memungkinkan pengaksesan dan manipulasi elemen-elemen di dalam dokumen tersebut.
-      - libxml (jika Anda menggunakan kelas TestResponse )
-        Libxml adalah sebuah perpustakaan (library) yang menyediakan fungsionalitas pemrosesan XML (eXtensible Markup Language).
-      - xdebug (jika Anda menggunakan CIUnitTestCase::assertHeaderEmitted())
-        Xdebug adalah sebuah alat debug untuk PHP yang membantu pengembang dalam mengidentifikasi dan memperbaiki kesalahan dalam kode mereka. 
+### Basis Data yang Didukung
+Basis data yang didukung saat ini adalah:
+* MySQL melalui MySQLidriver (hanya versi 5.1 ke atas)
+* PostgreSQL melalui Postgredriver (hanya versi 7.4 dan lebih tinggi)
+* SQLite3 melalui SQLite3driver
+* Microsoft SQL Server melalui SQLSRVdriver (hanya versi 2005 dan lebih tinggi)
+* Oracle Database melalui OCI8driver (hanya versi 12.1 dan lebih tinggi)
 
-    ### Basis Data yang Didukung
-      Basis data yang didukung saat ini adalah:
-      * MySQL melalui MySQLidriver (hanya versi 5.1 ke atas)
-      * PostgreSQL melalui Postgredriver (hanya versi 7.4 dan lebih tinggi)
-      * SQLite3 melalui SQLite3driver
-      * Microsoft SQL Server melalui SQLSRVdriver (hanya versi 2005 dan lebih tinggi)
-      * Oracle Database melalui OCI8driver (hanya versi 12.1 dan lebih tinggi)
-
-      Tidak semua driver telah dikonversi/ditulis ulang untuk CodeIgniter4. Daftar dibawah ini untuk yang luar biasa.
-      * MySQL (5.1+) melalui driver pdo
-      * Oracle melalui driver pdo
-      * PostgreSQL melalui driver pdo
-      * MSSQL melalui driver pdo
-      * SQLite melalui sqlite (versi 2) dan driver pdo
-      * CUBRID melalui driver cubrid dan pdo
-      * Interbase/Firebird melalui driver ibase dan pdo
-      * ODBC melalui driver odbc dan pdo (Anda harus tahu bahwa ODBC sebenarnya adalah lapisan abstraksi)
+Tidak semua driver telah dikonversi/ditulis ulang untuk CodeIgniter4. Daftar dibawah ini untuk yang luar biasa.
+* MySQL (5.1+) melalui driver pdo
+* Oracle melalui driver pdo
+* PostgreSQL melalui driver pdo
+* MSSQL melalui driver pdo
+* SQLite melalui sqlite (versi 2) dan driver pdo
+* CUBRID melalui driver cubrid dan pdo
+* Interbase/Firebird melalui driver ibase dan pdo
+* ODBC melalui driver odbc dan pdo (Anda harus tahu bahwa ODBC sebenarnya adalah lapisan abstraksi)
 
 ## Installation
 CodeIgniter memiliki dua metode instalasi yang didukung: download manual, atau menggunakan Composer.
@@ -290,6 +284,8 @@ class NewsModel extends Model
 ```
 
 ### Add NewsModel::getNews() Method
+Tambahkan mengikuti kode ke model anda
+
 ``` shell
 public function getNews($slug = false)
     {
@@ -300,6 +296,537 @@ public function getNews($slug = false)
         return $this->where(['slug' => $slug])->first();
     }
 ```
+
+## Display the News
+Sekarang setelah kueri ditulis, model harus dikaitkan dengan tampilan yang akan menampilkan item berita kepada pengguna.
+
+### Adding Routing Rules
+Ubah file app/Config/Routes.php Anda, sehingga terlihat sebagai berikut:
+
+``` shell
+<?php
+
+// ...
+
+use App\Controllers\News; // Add this line
+use App\Controllers\Pages;
+
+$routes->get('news', [News::class, 'index']);           // Add this line
+$routes->get('news/(:segment)', [News::class, 'show']); // Add this line
+
+$routes->get('pages', [Pages::class, 'index']);
+$routes->get('(:segment)', [Pages::class, 'view']);
+```
+
+### Create News Controller
+Buat pengontrol baru di app/Controllers/News.php.
+
+``` shell
+<?php
+
+namespace App\Controllers;
+
+use App\Models\NewsModel;
+
+class News extends BaseController
+{
+    public function index()
+    {
+        $model = model(NewsModel::class);
+
+        $data['news'] = $model->getNews();
+    }
+
+    public function show($slug = null)
+    {
+        $model = model(NewsModel::class);
+
+        $data['news'] = $model->getNews($slug);
+    }
+}
+```
+
+### Complete News::index() Method
+Ubah metode agar terlihat seperti ini:
+
+``` shell
+<?php
+
+namespace App\Controllers;
+
+use App\Models\NewsModel;
+
+class News extends BaseController
+{
+    public function index()
+    {
+        $model = model(NewsModel::class);
+
+        $data = [
+            'news'  => $model->getNews(),
+            'title' => 'News archive',
+        ];
+
+        return view('templates/header', $data)
+            . view('news/index')
+            . view('templates/footer');
+    }
+
+    // ...
+}
+```
+
+### Create news/index View File
+Buat app/Views/news/index.php dan tambahkan potongan kode berikutnya.
+
+``` shell
+<h2><?= esc($title) ?></h2>
+
+<?php if (! empty($news) && is_array($news)): ?>
+
+    <?php foreach ($news as $news_item): ?>
+
+        <h3><?= esc($news_item['title']) ?></h3>
+
+        <div class="main">
+            <?= esc($news_item['body']) ?>
+        </div>
+        <p><a href="/news/<?= esc($news_item['slug'], 'url') ?>">View article</a></p>
+
+    <?php endforeach ?>
+
+<?php else: ?>
+
+    <h3>No News</h3>
+
+    <p>Unable to find any news for you.</p>
+
+<?php endif ?>
+```
+
+### Complete News::show() Method
+Tambahkan beberapa kode ke pengontrol dan buat tampilan baru. Kembali ke pengontrol dan perbarui metode dengan yang berikut:
+
+``` shell
+<?php
+
+namespace App\Controllers;
+
+use App\Models\NewsModel;
+use CodeIgniter\Exceptions\PageNotFoundException;
+
+class News extends BaseController
+{
+    // ...
+
+    public function show($slug = null)
+    {
+        $model = model(NewsModel::class);
+
+        $data['news'] = $model->getNews($slug);
+
+        if (empty($data['news'])) {
+            throw new PageNotFoundException('Cannot find the news item: ' . $slug);
+        }
+
+        $data['title'] = $data['news']['title'];
+
+        return view('templates/header', $data)
+            . view('news/view')
+            . view('templates/footer');
+    }
+}
+```
+### Create news/view View File
+Satu-satunya hal yang tersisa untuk dilakukan adalah membuat tampilan yang sesuai di app/Views/news/view.php. Masukkan kode berikut dalam file ini.
+
+``` shell
+<h2><?= esc($news['title']) ?></h2>
+<p><?= esc($news['body']) ?></p>
+```
+
+Arahkan browser Anda ke halaman "berita" Anda, yaitu, localhost:8080/news, Anda akan melihat daftar item berita, yang masing-masing memiliki tautan untuk menampilkan hanya satu artikel.
+
+## CodeIgniter4 Overview
+### Models, Views, and Controllers
+* What is MVC?
+  MVC adalah singkatan dari Model-View-Controller, yang merupakan pola desain (design pattern) yang umum digunakan dalam pengembangan perangkat lunak, terutama dalam pengembangan aplikasi web. Pola ini membagi aplikasi menjadi tiga komponen utama: Model, View, dan Controller. Berikut adalah penjelasan singkat tentang masing-masing komponen:
+  
+  1. Models
+     model adalah mempertahankan satu jenis data untuk aplikasi. Ini mungkin pengguna, posting blog, transaksi, dll. Dalam hal ini, pekerjaan model memiliki dua bagian: menegakkan aturan bisnis pada data saat ditarik dari, atau dimasukkan ke dalam, basis data; dan menangani penyimpanan aktual dan pengambilan data dari database.
+
+    Model biasanya disimpan dalam app/Models, meskipun mereka dapat menggunakan namespace untuk dikelompokkan sesuai kebutuhan Anda.
+  
+  2. Views
+     Tampilan adalah file yang paling sederhana dan biasanya HTML dengan jumlah PHP yang sangat kecil. PHP harus sangat sederhana, Biasanya hanya menampilkan isi variabel, atau mengulang beberapa item dan menampilkan informasinya dalam tabel.
+
+    Views biasanya disimpan dalam app/Views,
+
+  3. Controller
+     mereka menerima masukan dari pengguna dan Kemudian tentukan apa yang harus dilakukan dengannya. Ini sering melibatkan meneruskan data ke model untuk menyimpannya, atau meminta data dari Model yang kemudian diteruskan ke tampilan yang akan ditampilkan.
+
+      Controller biasanya disimpan dalam app/Controllers, meskipun mereka dapat menggunakan namespace untuk dikelompokkan Kamu butuh.
+
+## General Topics 
+### Helper Functions
+What are Helpers?
+Helper adalah istilah yang digunakan untuk menggambarkan kumpulan fungsi-fungsi bantuan yang dirancang untuk membantu dalam tugas-tugas tertentu dalam pengembangan aplikasi.
+Pembantu biasanya disimpan di direktori system/Helpers atau app/Helpers anda.
+
+Loading a Helper
+Memuat file pembantu cukup sederhana menggunakan metode berikut:
+``` shell
+<?php
+
+helper('name');
+```
+Kode di atas memuat file name_helper.php.
+
+Misalnya, untuk memuat file Pembantu Cookie, yang diberi nama cookie_helper.php, Anda akan melakukan ini:
+``` sheel
+<?php
+
+helper('cookie');
+```
+
+Loading Multiple Helpers
+Jika Anda perlu memuat lebih dari satu helper sekaligus, Anda dapat lulus Array nama file di dan semuanya akan dimuat:
+``` shell
+<?php
+
+helper(['cookie', 'date']);
+```
+
+Loading from Specified Namespace
+Di dalam pengontrol kami, kami dapat Gunakan perintah berikut untuk memuat helper untuk kami:
+``` shell
+<?php
+
+helper('Example\Blog\blog');
+```
+Anda juga dapat menggunakan cara berikut:
+``` shell
+<?php
+
+helper('Example\Blog\Helpers\blog');
+```
+Using a Helper
+Misalnya, untuk membuat tautan menggunakan fungsi di salah satu file tampilan Anda, Anda akan melakukan ini:
+``` shell
+<div>
+<?= anchor('blog/comments', 'Click Here') ?>
+</div>
+```
+
+Creating Custom Helpers
+Misalnya, untuk membuat info helper, Anda akan membuat file bernama app/Helpers/info_helper.php, dan menambahkan fungsi ke file:
+``` shell
+?php
+
+// app/Helpers/info_helper.php
+use CodeIgniter\CodeIgniter;
+
+/**
+ * Returns CodeIgniter's version.
+ */
+function ci_version(): string
+{
+    return CodeIgniter::CI_VERSION;
+}
+```
+
+“Extending” Helpers
+Misalnya, untuk memperluas Array Helper asli, Anda akan membuat file bernama app/Helpers/array_helper.php, dan tambahkan atau ganti Fungsi:
+``` shell
+<?php
+
+// any_in_array() is not in the Array Helper, so it defines a new function
+function any_in_array($needle, $haystack)
+{
+    $needle = is_array($needle) ? $needle : [$needle];
+
+    foreach ($needle as $item) {
+        if (in_array($item, $haystack, true)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+// random_element() is included in Array Helper, so it overrides the native function
+function random_element($array)
+{
+    shuffle($array);
+
+    return array_pop($array);
+```
+
+## Controllers
+What is a Controller?
+
+Constructor
+``` shell
+<?php
+
+namespace App\Controllers;
+
+use CodeIgniter\HTTP\RequestInterface;
+use CodeIgniter\HTTP\ResponseInterface;
+use Psr\Log\LoggerInterface;
+
+class Product extends BaseController
+{
+    public function initController(
+        RequestInterface $request,
+        ResponseInterface $response,
+        LoggerInterface $logger
+    ) {
+        parent::initController($request, $response, $logger);
+
+        // Add your code here.
+    }
+
+    // ...
+}
+```
+
+Helpers
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class MyController extends BaseController
+{
+    protected $helpers = ['url', 'form'];
+}
+```
+
+forceHTTPS
+``` shell
+<?php
+
+if (! $this->request->isSecure()) {
+    $this->forceHTTPS();
+}
+```
+
+``` shell
+<?php
+
+if (! $this->request->isSecure()) {
+    $this->forceHTTPS(31536000); // one year
+}
+```
+
+Validating Data
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class StoreController extends BaseController
+{
+    public function product(int $id)
+    {
+        $data = [
+            'id'   => $id,
+            'name' => $this->request->getPost('name'),
+        ];
+
+        $rule = [
+            'id'   => 'integer',
+            'name' => 'required|max_length[255]',
+        ];
+
+        if (! $this->validateData($data, $rule)) {
+            return view('store/product', [
+                'errors' => $this->validator->getErrors(),
+            ]);
+        }
+
+        // ...
+    }
+}
+```
+
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class UserController extends BaseController
+{
+    public function updateUser(int $userID)
+    {
+        if (! $this->validate([
+            'email' => "required|is_unique[users.email,id,{$userID}]",
+            'name'  => 'required|alpha_numeric_spaces',
+        ])) {
+            // The validation failed.
+            return view('users/update', [
+                'errors' => $this->validator->getErrors(),
+            ]);
+        }
+
+        // The validation was successful.
+
+        // Get the validated data.
+        $validData = $this->validator->getValidated();
+
+        // ...
+    }
+}
+```
+
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class UserController extends BaseController
+{
+    public function updateUser(int $userID)
+    {
+        if (! $this->validate('userRules')) {
+            // The validation failed.
+            return view('users/update', [
+                'errors' => $this->validator->getErrors(),
+            ]);
+        }
+
+        // The validation was successful.
+
+        // Get the validated data.
+        $validData = $this->validator->getValidated();
+
+        // ...
+    }
+}
+```
+Protecting Methods
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class Helloworld extends BaseController
+{
+    protected function utility()
+    {
+        // some code
+    }
+}
+```
+
+Let’s try it: Hello World!
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class Helloworld extends BaseController
+{
+    public function getIndex()
+    {
+        return 'Hello World!';
+    }
+}
+```
+Methods
+Normal Methods
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class Helloworld extends BaseController
+{
+    public function getIndex()
+    {
+        return 'Hello World!';
+    }
+
+    public function getComment()
+    {
+        return 'I am not flat!';
+    }
+}
+```
+Defining a Default Controller
+``` shell
+public string $defaultController = 'Helloworld';
+```
+
+``` shell
+$routes->get('/', 'Home::index');
+```
+Default Method Fallback
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class Product extends BaseController
+{
+    public function getIndex($id = null, $action = '')
+    {
+        // ...
+    }
+}
+```
+Fallback to Default Controller
+``` shell
+<?php
+
+namespace App\Controllers\News;
+
+use App\Controllers\BaseController;
+
+class Home extends BaseController
+{
+    public function getIndex($id = null)
+    {
+        // ...
+    }
+}
+```
+
+Let’s try it: Hello World! (Legacy)
+``` shell
+<?php
+
+namespace App\Controllers;
+
+class Helloworld extends BaseController
+{
+    public function index()
+    {
+        return 'Hello World!';
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
